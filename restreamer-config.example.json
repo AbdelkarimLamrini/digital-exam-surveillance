@@ -1,0 +1,26 @@
+{
+	"version": 3,
+	"rtmp": {
+		"enable": true,
+		"enable_tls": false,
+		"address": ":1935",
+		"address_tls": ":1936",
+		"app": "/<app_name>",
+		"token": "<token>"
+	},
+	"sessions": {
+		"session_timeout_sec": 30
+	},
+	"api": {
+		"auth": {
+			"enable": true,
+			"disable_localhost": false,
+			"username": "<username>",
+			"password": "<password>",
+			"auth0": {
+				"enable": false,
+				"tenants": []
+			}
+		}
+	}
+}
