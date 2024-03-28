@@ -1,5 +1,7 @@
 .env.*.production
 restreamer-config.json
-digital-exam-surveillance-backend/
-digital-exam-surveillance-supervisor/
-digital-exam-surveillance-student/
+
+# Sub Repos
+backend/
+supervisor/
+student/
