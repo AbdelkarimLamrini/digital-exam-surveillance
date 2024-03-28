@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: abdelkarimlamrini/the-lab-frontend
+    ports:
+      - "80:80"
+    environment:
+      - TZ=Europe/Brussels
+    depends_on:
+      - backend
+
+  backend:
+    image: abdelkarimlamrini/the-lab-backend
+    ports:
+      - "8081:8081"
+    env_file:
+      - ./.env.backend.production
+    depends_on:
+      - database
+      - restreamer
+
+  restreamer:
+    image: datarhei/restreamer:latest
+    volumes:
+      - ./volumes/restreamer/config:/core/config
+      - ./volumes/restreamer/data:/core/data
+    environment:
+      - TZ=Europe/Brussels
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+      - "1935:1935"
+      - "1936:1936"
+      - "6000:6000/udp"
+
+  database:
+    image: postgres:15.4-alpine
+    volumes:
+      - ./volumes/postgres/data:/var/lib/postgresql/data
+    env_file:
+      - ./.env.database.production
+    ports:
+      - "5432:5432"
