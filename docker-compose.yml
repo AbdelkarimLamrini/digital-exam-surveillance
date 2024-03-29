@@ -21,10 +21,10 @@ services:
       - restreamer
 
   restreamer:
-    image: datarhei/restreamer:latest
+    image: datarhei/core:latest
     volumes:
-      - ./volumes/restreamer/config:/core/config
-      - ./volumes/restreamer/data:/core/data
+      - ./volumes/datarhei-core/config:/core/config
+      - ./volumes/datarhei-core/data:/core/data
     environment:
       - TZ=Europe/Brussels
     ports:
