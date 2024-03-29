@@ -16,16 +16,16 @@ This project is composed of three applications:
 
 ## Technologies
 
-- **Backend**: 
+- **[Backend](https://github.com/AbdelkarimLamrini/digital-exam-surveillance-backend)**: 
     - Java 21
     - Spring Boot 3.2.2
     - PostgreSQL 16.2
 - **Streaming Server**:
     - Datarhei Core 16.14.0
-- **Supervisor Frontend**:
+- **[Supervisor Frontend](https://github.com/AbdelkarimLamrini/digital-exam-surveillance-supervisor)**:
     - ReactJS 18.2.0
     - Material UI 5.15.11
     - ReactPlayer w/ HLS.js
-- **Student Frontend**:
+- **[Student Frontend](https://github.com/AbdelkarimLamrini/digital-exam-surveillance-student)**:
     - Flutter 3.19.0
     - FFmpeg 6.0
