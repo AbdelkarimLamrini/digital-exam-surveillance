@@ -17,7 +17,7 @@ mkdir -p volumes/datarhei-core/config
 mkdir -p volumes/datarhei-core/data/recordings
 
 echo "[3/4] - Installing config files"
-cp restreamer-config.json volumes/restreamer/config/config.json
+cp restreamer-config.json volumes/datarhei-core/config/config.json
 
 echo "[4/4] - Launching new containers"
 docker compose up -d
